@@ -6,13 +6,15 @@ Rails.application.routes.draw do
  # root 'welcome#index'
 
   resources :users, only: [:new, :create, :show]
+  resources :events, only: [:new, :create, :show, :index]
   
   get 'signup'  => 'users#new'
   get 'login'   => 'sessions#new'
   post 'login'   => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+  get 'new_event' => 'events#new'
   
-  root 'users#new'
+  root 'events#index'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

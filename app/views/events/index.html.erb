@@ -2,13 +2,13 @@
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
-        This page belongs to <%= current_user.name %>
+        Here are all the events
       </h1>
       
       <div class="col-md-8">
             <h3>Events</h3>
             <ul>
-            <% current_user.events.each do |event|  %>
+            <% @events.each do |event|  %>
             <li><%= event.title %></li>
             <%end %>
             </ul>  

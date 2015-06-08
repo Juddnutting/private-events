@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
         
         if user
             log_in(user)
-            binding.pry
+            
             redirect_to user
         else
             flash[:danger] = "User does not exist"

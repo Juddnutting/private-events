@@ -8,6 +8,9 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             redirect_to @user
+        else
+            flash.now[:danger] = "Signup did not work. Try again"
+            render 'new'
         end
         
     end
