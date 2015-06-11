@@ -12,7 +12,24 @@
             <li><%= event.title %></li>
             <%end %>
             </ul>  
-            
+        </div>
+        
+        <div class="col-md-8">
+            <h3>Past Events</h3>
+            <ul>
+            <% @past_events.each do |event|  %>
+            <li><%= event.title %></li>
+            <%end %>
+            </ul>  
+        </div>
+        
+        <div class="col-md-8">
+            <h3>Future Events</h3>
+            <ul>
+            <% @future_events.each do |event|  %>
+            <li><%= event.title %></li>
+            <%end %>
+            </ul>  
         </div>
     </section>
   </aside>

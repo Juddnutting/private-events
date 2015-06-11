@@ -1,17 +1,29 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
-        This page belongs to <%= current_user.name %>
-      </h1>
-      
+
       <div class="col-md-8">
-            <h3>Events</h3>
+            <h3>Events <%= @user.name %> has created</h3>
             <ul>
-            <% current_user.events.each do |event|  %>
+            <% @user.events.each do |event|  %>
             <li><%= event.title %></li>
             <%end %>
             </ul>  
+            
+            <h3> <%= @user.name %> has attended these events</h3>
+            <ul>
+            <% @user.previous_events.each do |attended_event|  %>
+            <li><%= attended_event.title %></li>
+            <%end %>
+            </ul>  
+            
+            <h3> <%= @user.name %> will attended these events</h3>
+            <ul>
+            <% @user.future_events.each do |attended_event|  %>
+            <li><%= attended_event.title %></li>
+            <%end %>
+            </ul>  
+            
             
         </div>
     </section>

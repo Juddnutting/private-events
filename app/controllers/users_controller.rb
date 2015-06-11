@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     
     def show
         @user = User.find(params[:id])
+        @previous_events = @user.previous_events
     end
     
     
@@ -25,4 +26,8 @@ class UsersController < ApplicationController
     def user_params
         params.require(:user).permit(:name, :email)
     end
+    
+    
+    
+    
 end

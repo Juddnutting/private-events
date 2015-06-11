@@ -1,11 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
-  date: 2015-06-08 02:46:14
+past_event:
+  title: really_old_event
+  description: old party!
+  date: 2000-06-08 02:46:14
+  creator_id: 1 
+  
 
-two:
-  title: MyString
+future_event:
+  title: Future Event
   description: MyText
-  date: 2015-06-08 02:46:14
+  date: 2017-06-08 02:46:14
+  creator_id: 1
+  
